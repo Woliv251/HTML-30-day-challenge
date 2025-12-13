@@ -1,0 +1,17 @@
+.video {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+img{
+    position: absolute;
+    z-index: -1;
+}    
+
+iframe {
+    position: absolute;
+    z-index: 20;
+    top: 110px;
+    margin-top: -11.4%;
+}
