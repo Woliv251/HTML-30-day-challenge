@@ -1,0 +1,54 @@
+:root {
+    --color-principal: #007bff; /* Azul */
+    --color-fondo: #f4f4f4;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-fondo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.contenedor {
+    text-align: center;
+}
+
+h1 {
+    color: var(--color-principal);
+    margin-bottom: 30px;
+}
+
+#confetti-btn {
+    background-color: var(--color-principal);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    /* Necesario para posicionar el confetti relativo al botón */
+    position: relative; 
+    overflow: hidden; 
+}
+
+#confetti-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para los pedazos de confetti (serán creados por JS) */
+.confetti-pieza {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: red; /* Color de relleno, JS lo cambiará */
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none; /* Ignorar clics */
+    transform-origin: 50% 50%;
+}
